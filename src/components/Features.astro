@@ -18,21 +18,21 @@ import Container from "./Container.astro"
     </div>
     <div class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
       <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8" style="background-size:cover;background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./images/bg_peckotmc.png');">
+        <div class="relative space-y-8 py-12 p-8 transition bg-cover bg-peckotmc">
           <img src="./images/burning_furnace.gif" class="w-12" width="512" height="512" loading="lazy" alt="PeckotMC" />
           <div class="space-y-2">
-            <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary group-hover:dark:text-secondarydark">
+            <h5 class="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary group-hover:dark:text-secondarydark">
               PeckotMC
             </h5>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-700 dark:text-gray-300">
               由 Peckot Studios 运营的一个基于 Minecraft: Java Edition 的多人游戏服务器。
             </p>
           </div>
-          <a href="#" class="flex items-center justify-between text-gray-700 dark:text-white group-hover:text-secondary group-hover:dark:text-secondarydark">
+          <a href="https://mc.peckot.com/" class="flex items-center justify-between text-gray-800 dark:text-white group-hover:text-secondary group-hover:dark:text-secondarydark">
             <span class="text-sm">查看详情</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
               <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
-            </svg>                
+            </svg>
           </a>
         </div>
       </div>
@@ -120,4 +120,24 @@ import Container from "./Container.astro"
       </div>
     </div>
   </Container>
+  <style>
+			@media (prefers-color-scheme: dark) {
+				.bg-peckotmc {
+					background-image: linear-gradient(
+							rgba(20, 20, 20, 0.5),
+							rgba(0, 0, 0, 0.5)
+						),
+						url("./images/bg_peckotmc.png");
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				.bg-peckotmc {
+					background-image: linear-gradient(
+							rgba(255, 255, 255, 0.6),
+							rgba(255, 255, 255, 0.5)
+						),
+						url("./images/bg_peckotmc.png");
+				}
+			}
+  </style>
 </div>
