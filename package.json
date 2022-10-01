@@ -1,7 +1,7 @@
 {
   "name": "peckot.com",
-  "version": "0.0.2",
-  "private": false,
+  "version": "0.1.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
