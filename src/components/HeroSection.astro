@@ -11,7 +11,7 @@ import Container from "./Container.astro"
     <Container>
         <div class="relative pt-36">
             <div class="lg:w-2/3 text-center mx-auto">
-              <h1 class="text-gray-900 dark:text-white font-bold text-4xl md:inline-flex md:text-5xl xl:text-6xl">&nbsp;不只是<span class="md:inline-flex dark:text-secondarydark dark:text-white">专注开发</span>&nbsp;<br/><span class="md:inline-flex">更是</span><span class="md:inline-flex dark:text-primarydark dark:text-white">构建梦想</span></h1>
+              <h1 class="text-gray-900 dark:text-white font-bold text-4xl md:inline-flex md:text-5xl xl:text-6xl">&nbsp;不只是<span class="md:inline-flex text-primary dark:text-primarydark">专注开发</span>&nbsp;<br/><span class="md:inline-flex">更是</span><span class="md:inline-flex text-primary dark:text-primarydark">构建梦想</span></h1>
                 <p class="mt-8 text-gray-700 dark:text-gray-300">由一个有着远大白日梦想的高中生及其爱好者共同建立运营的团队，<br>停止驻足观望，了解并加入我们，在此见证我们的——<br><span class="font-bold text-2xl">步步为营</span></p>
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
                     <a href="#" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
@@ -45,26 +45,20 @@ import Container from "./Container.astro"
                     </div>
                 </div>
             </div>
-            <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/microsoft.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                  <img src="./images/clients/airbnb.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                  <img src="./images/clients/google.svg" class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/ge.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                  <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/netflix.svg" class="h-8 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/google-cloud.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-              </div>
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4">
+              <a href="https://github.com/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="./images/supporter/github.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="GitHub" />
+              </a>
+              <a href="https://nodejs.org/zh-cn/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="./images/supporter/nodejs.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Node.js" />
+              </a>
+              <a href="https://astro.build/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="./images/supporter/astro.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Astro" />
+              </a>
+              <a href="https://vercel.com/home/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                <img src="./images/supporter/vercel.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Vercel" />
+              </a>
+            </div>
         </div>
     </Container>
 </div>
