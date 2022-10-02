@@ -6,13 +6,10 @@ import Container from "./Container.astro";
 <footer class="py-20 md:py-40">
     <Container>
       <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
-        <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
-          <div
-            class="flex w-full justify-center space-x-12 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
-          >
+        <div class="flex flex-wrap items-center divide-x divide-gray-900 dark:divide-gray-300 justify-between md:flex-nowrap">
+          <div class="flex w-full justify-center space-x-6 text-gray-600 dark:text-gray-300 sm:w-6/12 md:justify-start" >
             <ul class="list-inside list-disc space-y-8">
               <li><a href="#" class="transition hover:text-primary hover:dark:text-primarydark">Home</a></li>
-  
               <li><a href="#" class="transition hover:text-primary hover:dark:text-primarydark">About</a></li>
               <li><a href="#" class="transition hover:text-primary hover:dark:text-primarydark">Guide</a></li>
               <li><a href="#" class="transition hover:text-primary hover:dark:text-primarydark">Blocks</a></li>
@@ -116,10 +113,14 @@ import Container from "./Container.astro";
               </li>
             </ul>
           </div>
-          <div class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left">
-            <span class="text-gray-500 dark:text-gray-400">
-              『不只是专注开发，<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更是构建梦想。』
+          <div class="m-auto mt-16 w-10/12 space-x-6 space-y-5 text-center sm:mt-auto sm:w-6/12 sm:text-left">
+            <span class="block"></span>
+
+            <span class="block text-gray-500 dark:text-gray-400">
+              <span>
+                『不只是专注开发，<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更是构建梦想。』
+              </span>
             </span>
   
             <span class="block text-gray-500 dark:text-gray-400">&copy; 2021-
@@ -143,6 +144,8 @@ import Container from "./Container.astro";
             <span class="block text-gray-500 dark:text-gray-400">
               需要帮助？  <a href="#" class="font-semibold text-gray-600 dark:text-white">联系我们</a>
             </span>
+
+            <span class="block"></span>
           </div>
         </div>
       </div>
