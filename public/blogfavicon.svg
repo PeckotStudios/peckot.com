@@ -6,9 +6,9 @@
         var autodarklightbg = document.getElementByClassName('autodarklight-bg')[0];
         var autodarklight = document.getElementByClassName('autodarklight')[0];
         if (node.classList.contains('theme-dark')){
-            autodarklight.css("fill", "#9333EA");
+            autodarklight.css({"fill", "#9333EA"});
         } else {
-            autodarklight.css("fill", "#e14819");
+            autodarklight.css({"fill", "#e14819"});
         }
     </script>
 </svg>
