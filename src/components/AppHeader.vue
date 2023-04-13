@@ -64,7 +64,25 @@
                             </ul>
                         </div>
 
-                        <div v-if="!this.user" class="absolute flex-none lg:mt-0">
+                        <div v-if="user()" class="absolute flex-none">
+                            <Dropdown placement="right">
+                                <template v-slot:button>
+                                    <button class="flex rounded-md bg-transparent">
+                                        <img class="flex h-9 w-full items-center rounded-full ring-2 ring-primary dark:ring-primarydark"
+                                            :src="user().photoURL" />
+                                    </button>
+                                </template>
+                                <template v-slot:content>
+                                    <div class="text-gray-700 dark:text-white font-bold">
+                                        <a class="block cursor-pointer hover:bg-secondary hover:dark:bg-primarydark hover:text-white px-4 py-3"
+                                            href="/user">个人中心</a>
+                                        <a class="block cursor-pointer hover:bg-secondary hover:dark:bg-primarydark hover:text-white px-4 py-3"
+                                            @click="logout">退出登录</a>
+                                    </div>
+                                </template>
+                            </Dropdown>
+                        </div>
+                        <div v-else class="absolute flex-none lg:mt-0">
                             <a v-if="this.$route.path == '/signin'" href="/"
                                 class="h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
                                 <span class="relative text-sm font-thin text-white">
@@ -77,24 +95,6 @@
                                     注册|登录
                                 </span>
                             </a>
-                        </div>
-                        <div class="absolute flex-none">
-                            <Dropdown placement="right">
-                                <template v-if="this.user" v-slot:button>
-                                    <button class="flex rounded-md bg-transparent">
-                                        <img class="flex h-9 w-full items-center rounded-full ring-2 ring-primary dark:ring-primarydark"
-                                            :src="this.user.photoURL" />
-                                    </button>
-                                </template>
-                                <template v-slot:content>
-                                    <div class="text-gray-700 dark:text-white font-bold">
-                                        <a
-                                            class="block cursor-pointer hover:bg-secondary hover:dark:bg-primarydark hover:text-white px-4 py-3">个人中心</a>
-                                        <a class="block cursor-pointer hover:bg-secondary hover:dark:bg-primarydark hover:text-white px-4 py-3"
-                                            @click="logout">退出登录</a>
-                                    </div>
-                                </template>
-                            </Dropdown>
                         </div>
                     </div>
                 </div>
@@ -110,28 +110,32 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import Dropdown from "./Dropdown.vue";
 
 export default {
-    data() {
-        return {
-            user: auth.currentUser
-        }
-    },
     created() {
-        onAuthStateChanged(auth, (firebaseUser) => this.user = firebaseUser)
-        if (this.user) this.$router.push('/')
+        onAuthStateChanged(auth, (u) => localStorage.setItem('_user', JSON.stringify(u)))
+        console.log(JSON.parse(localStorage.getItem('_user')))
     },
     components: {
         Dropdown,
     },
     methods: {
+        user() {
+            const user = localStorage.getItem('_user')
+            return user ? JSON.parse(user) : null
+        },
         logout() {
             signOut(auth)
-                .then((ignored) => {
+                .then(() => {
+                    localStorage.removeItem('_user')
                     this.$router.push('/')
-                    this.user = null
+                    window.location.reload()
                 })
                 .catch((error) => {
-                    alert(error.message)
-                    // TODO
+                    this.$notify({
+                        group: 'bottom-right',
+                        type: 'error',
+                        title: '严重错误',
+                        text: error.message
+                    }, 5000)
                 })
         }
     }

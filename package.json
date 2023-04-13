@@ -1,6 +1,6 @@
 {
   "name": "peckot.com",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "firebase": "^9.19.1",
+    "notiwind": "^2.0.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

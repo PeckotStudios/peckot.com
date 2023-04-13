@@ -18,7 +18,13 @@ import BackgroundLight from './BackgroundLight.vue';
                         一个有着远大白日梦想的高中生团队，一个编程爱好者们共同组建并运营的团队，<br>一个真正用心考虑用户体验的团队。与其驻足观望，不如加入我们，在此创造——<br><span
                             class="font-bold text-2xl">更出色的产品与服务</span></p>
                     <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                        <a href="/signin"
+                        <a v-if="user()" href="/user"
+                            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                            <span class="relative text-base font-semibold text-white">
+                                个人中心
+                            </span>
+                        </a>
+                        <a v-else href="/signin"
                             class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
                             <span class="relative text-base font-semibold text-white">
                                 注册账户
@@ -53,20 +59,33 @@ import BackgroundLight from './BackgroundLight.vue';
                     </div>
                 </div>
                 <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4">
+                    <a href="https://vercel.com/home/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                        <img src="/supporters/vercel.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Vercel" />
+                    </a>
                     <a href="https://github.com/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
                         <img src="/supporters/github.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="GitHub" />
                     </a>
                     <a href="https://nodejs.org/zh-cn/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
                         <img src="/supporters/nodejs.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Node.js" />
                     </a>
-                    <a href="https://astro.build/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                        <img src="/supporters/astro.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Astro" />
-                    </a>
-                    <a href="https://vercel.com/home/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                        <img src="/supporters/vercel.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Vercel" />
+                    <a href="https://cn.vuejs.org/" class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                        <img src="/supporters/vuejs.svg" class="h-12 w-auto mx-auto center" loading="lazy" alt="Vue.js" />
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'HeroSection',
+    methods: {
+        user() {
+            const user = localStorage.getItem('_user')
+            return user ? JSON.parse(user) : null
+        }
+    }
+}
+
+</script>
