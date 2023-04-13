@@ -52,10 +52,10 @@
                         <div class="space-y-2">
                             <h5
                                 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                Second feature
+                                《项目II》
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
-                                Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                                [项目简介]
                             </p>
                         </div>
                         <a href="#" class="flex items-center justify-between group-hover:text-secondary">
@@ -78,10 +78,10 @@
                         <div class="space-y-2">
                             <h5
                                 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                Third feature
+                                《项目III》
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
-                                Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                                [项目简介]
                             </p>
                         </div>
                         <a href="#" class="flex items-center justify-between group-hover:text-secondary">
@@ -105,10 +105,10 @@
                         <div class="space-y-2">
                             <h5
                                 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
-                                More features
+                                《项目N》
                             </h5>
                             <p class="text-gray-600 dark:text-gray-300">
-                                Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                                [项目简介]
                             </p>
                         </div>
                         <a href="#" class="flex items-center justify-between group-hover:text-secondary">

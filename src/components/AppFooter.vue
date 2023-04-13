@@ -75,7 +75,7 @@
                         </span>
 
                         <span class="block text-gray-500 dark:text-gray-400">&copy;
-                            <span>{{ "2021-" + new Date().getFullYear() }}</span>
+                            <span>{{ `2021-${new Date().getFullYear()} ` }}</span>
                             <a href="https://peckot.com" class="font-bold transition hover:text-white">Peckot Studios</a>
                         </span>
 
@@ -95,6 +95,7 @@
                         <span class="block"></span>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-</footer></template>
+    </footer>
+</template>

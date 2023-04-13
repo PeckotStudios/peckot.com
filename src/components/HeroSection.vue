@@ -1,42 +1,39 @@
+<script setup>
+import BackgroundLight from './BackgroundLight.vue';
+</script>
+
 <template>
     <div class="relative">
-        <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-            <div
-                class="blur-[106px] h-56 bg-gradient-to-br from-primary to-orange-400 dark:from-blue-700 dark:to-purple-400">
-            </div>
-            <div
-                class="blur-[106px] h-32 bg-gradient-to-r from-yellow-400 to-red-300 dark:from-primarydark-400 dark:to-indigo-600">
-            </div>
-        </div>
+        <BackgroundLight />
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div class="relative pt-36">
                 <div class="lg:w-2/3 text-center mx-auto">
                     <h1 class="text-gray-900 dark:text-white font-bold text-4xl md:inline-flex md:text-5xl xl:text-6xl">
                         &nbsp;不只是<span
-                            class="md:inline-flex text-primary dark:text-primarydark">专注开发</span>&nbsp;<br /><span
+                            class="md:inline-flex text-gradient bg-gradient-to-br bg-clip-text text-transparent from-primary to-secondary dark:from-primarydark dark:to-secondarydark">专注开发</span>&nbsp;<br /><span
                             class="md:inline-flex">更是</span><span
-                            class="md:inline-flex text-primary dark:text-primarydark">构建梦想</span>
+                            class="md:inline-flex text-gradient bg-gradient-to-tl bg-clip-text text-transparent from-primary to-secondary dark:from-primarydark dark:to-secondarydark">构建梦想</span>
                     </h1>
                     <p class="mt-8 text-gray-700 dark:text-gray-300">
-                        一个由有着远大白日梦想的高中生及网络开发爱好者们共同组建并运营的团队，<br>一个真正用心考虑用户体验的团队。与其驻足观望，不如加入我们，在此见证我们的——<br><span
-                            class="font-bold text-2xl">成长历程</span></p>
+                        一个有着远大白日梦想的高中生团队，一个编程爱好者们共同组建并运营的团队，<br>一个真正用心考虑用户体验的团队。与其驻足观望，不如加入我们，在此创造——<br><span
+                            class="font-bold text-2xl">更出色的产品与服务</span></p>
                     <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                        <a href="#"
+                        <a href="/signin"
                             class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
                             <span class="relative text-base font-semibold text-white">
                                 注册账户
                             </span>
                         </a>
-                        <a href="https://mc.peckot.com"
-                            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:dark:bg-primarydark/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
-                            <span class="relative text-base font-semibold text-primary dark:text-white">
-                                PeckotMC
-                            </span>
-                        </a>
-                        <a href="#"
+                        <a href="/about"
                             class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:dark:bg-primarydark/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
                             <span class="relative text-base font-semibold text-primary dark:text-white">
                                 关于我们
+                            </span>
+                        </a>
+                        <a href="https://docs.peckot.com"
+                            class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:dark:bg-primarydark/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
+                            <span class="relative text-base font-semibold text-primary dark:text-white">
+                                阅读文档
                             </span>
                         </a>
                     </div>
@@ -70,5 +67,6 @@
                     </a>
                 </div>
             </div>
+        </div>
     </div>
-</div></template>
+</template>
