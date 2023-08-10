@@ -23,16 +23,14 @@
                 <div
                     class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
-                        <img class="w-12 h-12 rounded-full"
-                            src="https://pbs.twimg.com/profile_images/1372441824560771075/DTcuXT0Z_400x400.jpg" alt=""
-                            width="" height="" loading="lazy">
+                        <img class="w-12 h-12 rounded-full" src="https://q1.qlogo.cn/g?b=qq&nk=3492772281&s=640"
+                            alt="Bill Zhong' avatar" loading="lazy" draggable="false" />
                         <div>
-                            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Rodrigo Aguilar</h6>
-                            <p class="text-sm text-gray-500 dark:text-gray-300">Creator of Tailwind Awesome</p>
+                            <h6 class="text-lg font-medium text-gray-700 dark:text-white">Bill Zhong</h6>
+                            <p class="text-sm text-gray-500 dark:text-gray-300">Peckot Studios 管理组成员</p>
                         </div>
                     </div>
-                    <p class="mt-8"> Lorem ipsum dolor laboriosam deleniti aperiam ab veniam sint non cumque quis tempore
-                        cupiditate. Sint libero voluptas veniam at reprehenderit, veritatis harum et rerum.</p>
+                    <p class="mt-8">2021年6月27日创立 Peckot Studios。那天，我们踏入了未曾设想的的道路。尽管身隔远方，但是我们就像一滴滴的水珠，其表面张力不断地拉拢着我们，正因如此，才砌起了我们心中那一座热情的圣殿、点燃了希望的冉冉篝火。</p>
                 </div>
                 <div
                     class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
