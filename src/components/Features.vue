@@ -28,7 +28,7 @@
                                 PeckotMC
                             </h5>
                             <p class="text-gray-700 dark:text-gray-300">
-                                由 Peckot Studios 运营的一个基于 Minecraft: Java Edition 的多人游戏服务器。
+                                由 Peckot Studios 运营的一个运行于 Minecraft: Java Edition 的多人在线中型游戏服务器。
                             </p>
                         </div>
                         <a href="https://mc.peckot.com/"

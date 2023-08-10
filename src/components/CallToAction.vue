@@ -8,26 +8,26 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div class="relative">
                 <div class="flex items-center justify-center -space-x-2">
-                    <img loading="lazy" width="220" height="220" src="https://q1.qlogo.cn/g?b=qq&nk=114514&s=640"
-                        alt="member photo" class="h-8 w-8 rounded-full object-cover" draggable="false" />
+                    <img loading="lazy" width="220" height="220" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        alt="############" class="h-8 w-8 rounded-full object-cover" draggable="false" />
                     <img loading="lazy" width="220" height="220" src="https://q1.qlogo.cn/g?b=qq&nk=3492772281&s=640"
                         alt="Bill_Zhong" class="h-12 w-12 rounded-full object-cover" draggable="false" />
                     <img loading="lazy" width="220" height="220" src="https://q1.qlogo.cn/g?b=qq&nk=2671876934&s=640"
                         alt="Pectics" class="z-10 h-16 w-16 rounded-full object-cover" draggable="false" />
-                    <img loading="lazy" width="220" height="220" src="https://q1.qlogo.cn/g?b=qq&nk=229131894&s=640"
-                        alt="zhanshenPXW" class="relative h-12 w-12 rounded-full object-cover" draggable="false" />
-                    <img loading="lazy" width="220" height="220" src="https://q1.qlogo.cn/g?b=qq&nk=114514&s=640"
-                        alt="member photo" class="h-8 w-8 rounded-full object-cover" draggable="false" />
+                    <img loading="lazy" width="220" height="220" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        alt="############" class="relative h-12 w-12 rounded-full object-cover" draggable="false" />
+                    <img loading="lazy" width="220" height="220" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        alt="############" class="h-8 w-8 rounded-full object-cover" draggable="false" />
                 </div>
                 <div class="m-auto space-y-6 md:w-8/12 lg:w-7/12">
-                    <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">即刻开始</h1>
+                    <h1 class="mt-6 text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl">即刻加入</h1>
                     <p class="text-center text-xl text-gray-600 dark:text-gray-300">
-                        跟随 Peckot Studios 的协同开发，成为我们所期待的第一批早期用户。
+                        加入 Peckot Studios 的行列，成为我们所期待的<span class="font-bold">优秀开发者</span>。
                     </p>
                     <div class="flex flex-wrap justify-center gap-6">
                         <a href="/signin"
                             class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:dark:bg-primarydark before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
-                            <span class="relative text-base font-semibold text-white dark:text-dark">注册账户</span>
+                            <span class="relative text-base font-semibold text-white dark:text-dark">加入我们</span>
                         </a>
                         <a href="/about"
                             class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:dark:bg-primarydark/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">

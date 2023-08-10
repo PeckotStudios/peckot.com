@@ -9,26 +9,21 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/signin',
-      name: 'signin',
-      component: () => import('../views/SignInView.vue'),
-      beforeEnter: (to, from, next) => {
-        if ((() => {
-          const user = localStorage.getItem('_user')
-          return user ? JSON.parse(user) : null
-        })()) next('/')
-        else next()
-      }
-    },
+    // {
+    //   path: '/signin',
+    //   name: 'signin',
+    //   component: () => import('../views/SignInView.vue'),
+    //   beforeEnter: (to, from, next) => {
+    //     if ((() => {
+    //       const user = localStorage.getItem('_user')
+    //       return user ? JSON.parse(user) : null
+    //     })()) next('/')
+    //     else next()
+    //   }
+    // },
     {
       path: '/about',
       name: 'about',
-      beforeEnter: (to, from, next) => next('/'),
-    },
-    {
-      path: '/user',
-      name: 'user',
       beforeEnter: (to, from, next) => next('/'),
     },
   ]

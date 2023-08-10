@@ -69,8 +69,8 @@
 
                         <span class="block text-gray-500 dark:text-gray-400">
                             <span>
-                                『不只是专注开发，<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更是构建梦想。』
+                                『&nbsp;&nbsp;不只是专注开发，<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更是打造梦想。』
                             </span>
                         </span>
 
