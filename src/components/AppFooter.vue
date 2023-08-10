@@ -80,7 +80,7 @@
                         </span>
 
                         <span class="block transition text-gray-500 dark:text-gray-400 hover:text-white">
-                            <a href="https://beian.miit.gov.cn" class="font-bold">渝ICP备2022006862号</a>
+                            <a href="https://beian.miit.gov.cn" class="font-bold">渝ICP备2022006862号-1</a>
                         </span>
 
                         <span class="flex text-gray-600 dark:text-white">

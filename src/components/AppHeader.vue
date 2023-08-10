@@ -111,7 +111,10 @@ import Dropdown from "./Dropdown.vue";
 
 export default {
     created() {
-        onAuthStateChanged(auth, (u) => localStorage.setItem('_user', JSON.stringify(u)))
+        onAuthStateChanged(auth, (u) => {
+            const user = JSON.stringify(u);
+            localStorage.setItem('_user', user)
+        })
         console.log(JSON.parse(localStorage.getItem('_user')))
     },
     components: {

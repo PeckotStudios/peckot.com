@@ -81,7 +81,7 @@ import BackgroundLight from './BackgroundLight.vue';
 <script>
 import { auth } from '../firebase'
 
-import { setPersistence, browserLocalPersistence, signInWithEmailLink, signInWithPopup, GithubAuthProvider, OAuthProvider, GoogleAuthProvider, sendSignInLinkToEmail, isSignInWithEmailLink, updateProfile } from 'firebase/auth'
+import { setPersistence, browserLocalPersistence, signInWithEmailLink, signInWithPopup, GithubAuthProvider, OAuthProvider, GoogleAuthProvider, sendSignInLinkToEmail, isSignInWithEmailLink, updateProfile, signInWithRedirect, linkWithPopup, getAdditionalUserInfo, updateCurrentUser } from 'firebase/auth'
 
 export default {
     data() {
@@ -137,8 +137,9 @@ export default {
                 }
                 try {
                     const userCredential = await signInWithEmailLink(auth, mail, window.location.href)
+                    const user = JSON.stringify(userCredential.user)
                     localStorage.removeItem('_email_signin')
-                    localStorage.setItem('_user', JSON.stringify(userCredential.user))
+                    localStorage.setItem('_user', user)
                     this.$notify({
                         group: 'bottom-right',
                         type: 'info',
@@ -150,10 +151,12 @@ export default {
                 }
             }
         },
-        loginWithMicrosoft() {
-            signInWithPopup(auth, new OAuthProvider('microsoft.com'))
+        loginWithPopup(provider) {
+            signInWithPopup(auth, provider)
                 .then((userCredential) => {
-                    localStorage.setItem('_user', JSON.stringify(userCredential.user))
+                    console.log('authCredential', OAuthProvider.credentialFromResult(userCredential))
+                    const user = JSON.stringify(userCredential.user)
+                    localStorage.setItem('_user', user)
                     this.$router.push('/')
                     this.$notify({
                         group: 'bottom-right',
@@ -162,82 +165,43 @@ export default {
                         text: `尊敬的 ${userCredential.user.email}`
                     }, 3000)
                 })
-                .catch((error) => this.logError(error))
+                .catch((error) => {
+                    switch (error.code) {
+                        case 'auth/account-exists-with-different-credential':
+                            // admin.database().ref('users').child(error.email).once('value', (snapshot) => {
+                            //     const user = snapshot.val()
+                            //     if (user) {
+                            //         this.$notify({
+                            //             group: 'bottom-right',
+                            //             type: 'warning',
+                            //             title: '账户已存在',
+                            //             text: `尊敬的 ${user.email}，您的账户已经绑定了 ${user.provider} 账户，无法绑定其他账户。`
+                            //         }, 5000)
+                            //     } else {
+                            //         this.$notify({
+                            //             group: 'bottom-right',
+                            //             type: 'warning',
+                            //             title: '账户已存在',
+                            //             text: `尊敬的 ${error.email}，您的账户已经绑定了其他账户，无法绑定其他账户。`
+                            //         }, 5000)
+                            //     }
+                            // })
+                            const authCredential = OAuthProvider.credentialFromError(error)
+                            localStorage.setItem('_link', provider.providerId)
+                            console.log('等待绑定:', authCredential)
+                            console.log('错误:', error)
+                            this.logError(error)
+                            break;
+                        default:
+                            console.log('未知错误:', error)
+                            this.logError(error)
+                            break;
+                    }
+                })
         },
-        loginWithGithub() {
-            signInWithPopup(auth, new GithubAuthProvider())
-                .then((userCredential) => {
-                    localStorage.setItem('_user', JSON.stringify(userCredential.user))
-                    this.$router.push('/')
-                    this.$notify({
-                        group: 'bottom-right',
-                        type: 'info',
-                        title: '登陆成功',
-                        text: `尊敬的 ${userCredential.user.email}`
-                    }, 3000)
-                })
-                .catch((error) => this.logError(error))
-        },
-        loginWithGoogle() {
-            signInWithPopup(auth, new GoogleAuthProvider())
-                .then((userCredential) => {
-                    localStorage.setItem('userIdToken', JSON.stringify(userCredential.user))
-                    this.$router.push('/')
-                    this.$notify({
-                        group: 'bottom-right',
-                        type: 'info',
-                        title: '登陆成功',
-                        text: `尊敬的 ${userCredential.user.email}`
-                    }, 3000)
-                })
-                .catch((error) => this.logError(error))
-        }
+        loginWithMicrosoft() { this.loginWithPopup(new OAuthProvider('microsoft.com')) },
+        loginWithGithub() { this.loginWithPopup(new GithubAuthProvider()) },
+        loginWithGoogle() { this.loginWithPopup(new GoogleAuthProvider()) },
     }
 }
 </script>
-<!--   
-
-<script>
-import { signInWithPopup, createUserWithEmailAndPassword } from '@firebase/auth';
-import { GithubAuthProvider } from '@firebase/auth';
-
-export default {
-    data() {
-        return {
-            email: '',
-            password: '',
-        }
-    },
-    methods: {
-        github() {
-            signInWithPopup(this.$firebaseAuth, new GithubAuthProvider())
-                .then((result) => {
-                    const credential = GithubAuthProvider.credentialFromResult(result);
-                    const token = credential.accessToken;
-                    this.$firebaseUser = result.user;
-                    this.$router.push('/');
-                    console.log('用户登录成功: Github');
-                }).catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    const email = error.customData.email;
-                    const credential = GithubAuthProvider.credentialFromError(error);
-                });
-        },
-        submit() {
-            createUserWithEmailAndPassword(this.$firebaseAuth, this.email, this.password)
-                .then((userCredential) => {
-                    this.$router.push('/');
-                    this.$firebaseUser = userCredential.user;
-                    console.log('用户登录成功: Email');
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.log('eCode', errorCode);
-                    console.log('eMsg', errorMessage);
-                });
-        },
-    },
-}
-</script> -->
