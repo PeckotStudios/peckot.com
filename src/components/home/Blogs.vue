@@ -8,23 +8,23 @@
                 </p>
             </div>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-10">
-                <div
+                <a id="blog1_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
-                            alt="art cover" loading="lazy" width="1000" height="667"
+                        <img id="blog1_img" alt="art cover" loading="lazy" width="1000" height="667"
                             class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
-                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-                            Some title
+                        <h3 id="blog1_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
+                            获取中...
                         </h3>
-                        <p class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
-                            Some description
+                        <p id="blog1_desc" class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
+                            获取中...
                         </p>
-                        <a class="inline-block" href="#">
-                            <span class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
-                        </a>
+                        <p class="inline-block" href="#">
+                            <span
+                                class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
+                        </p>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 64" fill="currentColor"
                             class="inline ml-4 mb-1 text-primary dark:text-secondarydark w-5 h-5 text-2xl opacity-0 transition duration-200 group-hover:opacity-100">
                             <path fill-rule="evenodd"
@@ -32,24 +32,24 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                </div>
-                <div
+                </a>
+                <a id="blog2_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
-                            alt="art cover" loading="lazy" width="1000" height="667"
+                        <img id="blog2_img" alt="art cover" loading="lazy" width="1000" height="667"
                             class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
-                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-                            Some title
+                        <h3 id="blog2_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
+                            获取中...
                         </h3>
-                        <p class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
-                            Some description
+                        <p id="blog2_desc" class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
+                            获取中...
                         </p>
-                        <a class="inline-block" href="#">
-                            <span class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
-                        </a>
+                        <p class="inline-block" href="#">
+                            <span
+                                class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
+                        </p>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 64" fill="currentColor"
                             class="inline ml-4 mb-1 text-primary dark:text-secondarydark w-5 h-5 text-2xl opacity-0 transition duration-200 group-hover:opacity-100">
                             <path fill-rule="evenodd"
@@ -57,24 +57,24 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                </div>
-                <div
+                </a>
+                <a id="blog3_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
-                            alt="art cover" loading="lazy" width="1000" height="667"
+                        <img id="blog3_img" alt="art cover" loading="lazy" width="1000" height="667"
                             class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
-                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
-                            Some title
+                        <h3 id="blog3_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
+                            获取中...
                         </h3>
-                        <p class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
-                            Some description
+                        <p id="blog3_desc" class="mt-4 mb-6 text-gray-600 dark:text-gray-300">
+                            获取中...
                         </p>
-                        <a class="inline-block" href="#">
-                            <span class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
-                        </a>
+                        <p class="inline-block" href="#">
+                            <span
+                                class="font-bold text-secondary dark:text-purple-400 group-hover:text-primary group-hover:dark:text-secondarydark">查看详情</span>
+                        </p>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 64" fill="currentColor"
                             class="inline ml-4 mb-1 text-primary dark:text-secondarydark w-5 h-5 text-2xl opacity-0 transition duration-200 group-hover:opacity-100">
                             <path fill-rule="evenodd"
@@ -82,7 +82,7 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                </div>
+                </a>
                 <a href="https://blog.peckot.com"
                     class="group flex bg-blog bg-cover bg-opacity-50 items-center justify-center p-6 sm:p-8 rounded-3xl border border-gray-100 dark:shadow-none dark:border-gray-700 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -120,6 +120,8 @@
 </style>
 
 <script>
+import axios from 'axios';
+
 export default {
     methods: {
         ws(width) {
@@ -133,6 +135,22 @@ export default {
         window.addEventListener('resize', () => {
             this.$forceUpdate();
         });
+        axios.get('https://blog.peckot.com/api/getLatest3Posts')
+            .then((response) => {
+                let blogs = response.data.data;
+                console.log(blogs);
+                for (let i=0; i<3; i++) {
+                    document.getElementById(`blog${i+1}_img`).src = blogs[i].cover;
+                    document.getElementById(`blog${i+1}_title`).innerHTML = blogs[i].title;
+                    document.getElementById(`blog${i+1}_desc`).innerHTML = blogs[i].description;
+                    let card = document.getElementById(`blog${i+1}_link`);
+                    card.href = blogs[i]._link;
+                    card.style.cursor = 'pointer';
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 }
 </script>
