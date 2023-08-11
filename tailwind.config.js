@@ -7,9 +7,10 @@ export const presets = [];
 export const darkMode = 'media';
 export const theme = {
   screens: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
+    sm: '768px',
+    md: '880px',
+    bg: '1024px',
+    lg: '1200px',
     xl: '1280px',
     '2xl': '1536px',
   },

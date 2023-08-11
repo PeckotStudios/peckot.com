@@ -3,10 +3,10 @@
         <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
             <div class="mb-20 space-y-4 px-6 md:px-0">
                 <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
-                    一些用户和团队成员的评价
+                    一些用户和开发者的评价
                 </h2>
             </div>
-            <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
+            <div :class="{ 'columns-3': wx(880) }" class="gap-8 space-y-8">
                 <div
                     class="aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
@@ -23,7 +23,8 @@
                 <div
                     class="aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
-                        <img class="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
                             alt="" loading="lazy" draggable="false">
                         <div>
                             <h6 class="text-lg font-medium text-gray-700 dark:text-white">Someone</h6>
@@ -48,7 +49,8 @@
                 <div
                     class="aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
-                        <img class="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
                             alt="" loading="lazy" draggable="false">
                         <div>
                             <h6 class="text-lg font-medium text-gray-700 dark:text-white">Someone</h6>
@@ -60,7 +62,8 @@
                 <div
                     class="aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
-                        <img class="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
                             alt="" loading="lazy" draggable="false">
                         <div>
                             <h6 class="text-lg font-medium text-gray-700 dark:text-white">Someone</h6>
@@ -72,7 +75,8 @@
                 <div
                     class="aspect-auto p-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
                     <div class="flex gap-4">
-                        <img class="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://th.bing.com/th/id/R.07f468b53c25821ba3e6f132d6d25bd8?rik=DErpDe5xln0zkQ&riu=http%3a%2f%2fphotos.tuchong.com%2f280990%2ff%2f3418241.jpg&ehk=VPbVmeTbGYp4eM04ruObNwuRl2Isjytt%2fRaPEoC4Gy4%3d&risl=&pid=ImgRaw&r=0"
                             alt="" loading="lazy" draggable="false">
                         <div>
                             <h6 class="text-lg font-medium text-gray-700 dark:text-white">Someone</h6>
@@ -85,3 +89,29 @@
         </div>
     </div>
 </template>
+
+<style>
+.divider {
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin: 0 0.5rem;
+}
+</style>
+
+<script>
+export default {
+    methods: {
+        ws(width) {
+            return window.innerWidth < width;
+        },
+        wx(width) {
+            return window.innerWidth >= width;
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.$forceUpdate();
+        });
+    }
+}
+</script>

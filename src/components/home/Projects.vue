@@ -20,8 +20,7 @@
                 <div
                     class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                     <div class="relative space-y-8 py-12 p-8 transition bg-cover bg-peckotmc">
-                        <img src="/images/burning_furnace.gif" class="w-12" width="512" height="512" loading="lazy"
-                            alt="PeckotMC" />
+                        <img src="/images/burning_furnace.gif" class="w-12" width="512" height="512" loading="lazy" alt="PeckotMC" />
                         <div class="space-y-2">
                             <h5
                                 class="text-xl font-semibold text-gray-800 dark:text-white transition group-hover:text-secondary group-hover:dark:text-secondarydark">
@@ -142,4 +141,5 @@
                 rgba(255, 255, 255, 0.5)),
             url(/images/bg_peckotmc.png);
     }
-}</style>
+}
+</style>

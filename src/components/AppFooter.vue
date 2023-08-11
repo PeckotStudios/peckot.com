@@ -1,11 +1,11 @@
 <template>
     <footer class="py-20 md:py-60">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+        <div class="max-w-7xl mx-auto md:px-12 xl:px-6">
             <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
-                <div
-                    class="flex flex-wrap items-center divide-x divide-gray-900 dark:divide-gray-300 justify-between md:flex-nowrap">
-                    <div
-                        class="flex w-full justify-center space-x-6 text-gray-600 dark:text-gray-300 sm:w-6/12 md:justify-start">
+                <div :class="{ 'flex-wrap divide-y': ws(610), 'flex-nowrap divide-x': wx(610) }"
+                    class="flex items-center divide-gray-900 dark:divide-gray-300 justify-between">
+                    <div :class="{ 'w-full justify-center': ws(610), 'w-1/2 justify-end mr-6': wx(610) }"
+                        class="flex space-x-6 text-gray-600 dark:text-gray-300">
                         <ul class="list-inside list-disc space-y-8">
                             <li><a href="https://docs.peckot.com"
                                     class="transition hover:text-primary hover:dark:text-primarydark">阅读文档</a></li>
@@ -16,7 +16,6 @@
                             <li><a href="https://mc.peckot.com"
                                     class="transition hover:text-primary hover:dark:text-primarydark">PeckotMC</a></li>
                         </ul>
-
                         <ul role="list" class="space-y-8">
                             <li>
                                 <a href="https://peckot.com/f/joinus/bilibili"
@@ -64,14 +63,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="m-auto mt-16 w-10/12 space-x-6 space-y-5 text-center sm:mt-auto sm:w-6/12 sm:text-left">
+                    <div :class="{ 'text-center': ws(610), 'text-left space-x-6 mt-auto w-1/2': wx(610) }" class="m-auto mt-8 w-5/6 space-y-5">
+                        
                         <span class="block"></span>
 
                         <span class="block text-gray-500 dark:text-gray-400">
-                            <span>
-                                『&nbsp;&nbsp;不只是专注开发，<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更是打造梦想。』
-                            </span>
+                            <span>『&nbsp;&nbsp;不只是专注开发，</span>
+                            <span v-if="wx(610)"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span>更是打造梦想。』</span>
                         </span>
 
                         <span class="block text-gray-500 dark:text-gray-400">&copy;
@@ -83,7 +82,7 @@
                             <a href="https://beian.miit.gov.cn" class="font-bold">渝ICP备2022006862号-1</a>
                         </span>
 
-                        <span class="flex text-gray-600 dark:text-white">
+                        <span class="block text-gray-600 dark:text-white">
                             <a href="#" class="font-medium">用户使用条款</a>&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="#" class="font-medium">隐私保护协议</a>
                         </span>
@@ -99,3 +98,21 @@
         </div>
     </footer>
 </template>
+
+<script>
+export default {
+    methods: {
+        ws(width) {
+            return window.innerWidth < width;
+        },
+        wx(width) {
+            return window.innerWidth >= width;
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.$forceUpdate();
+        });
+    }
+}
+</script>

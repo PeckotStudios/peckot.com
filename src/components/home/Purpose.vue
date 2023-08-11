@@ -9,7 +9,8 @@
                     d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
                     clip-rule="evenodd" />
             </svg>
-            <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+            <div
+                class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
                 <div class="md:5/12 lg:w-1/2">
                     <img src="/images/pie.svg" alt="image" loading="lazy" class="w-full" draggable="false" />
                 </div>
@@ -46,14 +47,15 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </div>
-                        <div class="w-5/6">
-                            <h4 class="font-semibold text-lg text-gray-700 dark:text-teal-300">The second</h4>
-                            <p class="text-gray-500 dark:text-gray-400">The second description
-                            </p>
+                            <div class="w-5/6">
+                                <h4 class="font-semibold text-lg text-gray-700 dark:text-teal-300">The second</h4>
+                                <p class="text-gray-500 dark:text-gray-400">The second description
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div></template>
+</template>
