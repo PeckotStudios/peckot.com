@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6" style="margin-top: -58px;">
             <div class="mb-10 space-y-2 text-center">
                 <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">近期文章</h2>
                 <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300 italic">
@@ -11,8 +11,8 @@
                 <a id="blog1_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img id="blog1_img" alt="art cover" loading="lazy" width="1000" height="667"
-                            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+                        <img id="blog1_img" alt="art cover" loading="lazy" src="/images/bg_blog.png"
+                            class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
                         <h3 id="blog1_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -36,8 +36,8 @@
                 <a id="blog2_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img id="blog2_img" alt="art cover" loading="lazy" width="1000" height="667"
-                            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+                        <img id="blog2_img" alt="art cover" loading="lazy" src="/images/bg_blog.png"
+                            class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
                         <h3 id="blog2_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -61,8 +61,8 @@
                 <a id="blog3_link"
                     class="lg:col-span-3 group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 hover:scale-105 duration-200">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img id="blog3_img" alt="art cover" loading="lazy" width="1000" height="667"
-                            class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+                        <img id="blog3_img" alt="art cover" loading="lazy" src="/images/bg_blog.png"
+                            class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" />
                     </div>
                     <div class="mt-4 relative">
                         <h3 id="blog3_title" class="text-2xl font-semibold text-gray-800 dark:text-white">
@@ -139,13 +139,12 @@ export default {
             .then((response) => {
                 let blogs = response.data.data;
                 console.log(blogs);
-                for (let i=0; i<3; i++) {
-                    document.getElementById(`blog${i+1}_img`).src = blogs[i].cover;
-                    document.getElementById(`blog${i+1}_title`).innerHTML = blogs[i].title;
-                    document.getElementById(`blog${i+1}_desc`).innerHTML = blogs[i].description;
-                    let card = document.getElementById(`blog${i+1}_link`);
+                for (let i = 0; i < 3; i++) {
+                    document.getElementById(`blog${i + 1}_img`).src = blogs[i].cover || '/images/bg_blog.png';
+                    document.getElementById(`blog${i + 1}_title`).innerHTML = blogs[i].title || "标题获取失败";
+                    document.getElementById(`blog${i + 1}_desc`).innerHTML = blogs[i].description || '描述获取失败';
+                    let card = document.getElementById(`blog${i + 1}_link`);
                     card.href = blogs[i]._link;
-                    card.style.cursor = 'pointer';
                 }
             })
             .catch((err) => {

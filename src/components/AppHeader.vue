@@ -36,13 +36,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://blog.peckot.com" target="_self" :class="getPageClass()">
-                                        <span>Peckot 博客</span>
+                                    <a href="https://docs.peckot.com" target="_self" :class="getPageClass()">
+                                        <span>阅读文档</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://docs.peckot.com" target="_self" :class="getPageClass()">
-                                        <span>阅读文档</span>
+                                    <a href="https://blog.peckot.com" target="_self" :class="getPageClass()">
+                                        <span>查看博客</span>
                                     </a>
                                 </li>
                                 <li>

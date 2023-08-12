@@ -6,6 +6,11 @@ export const content = [
 export const presets = [];
 export const darkMode = 'media';
 export const theme = {
+  extend: {
+    columnSpan: theme => ({
+      'all': 'none',
+    })
+  },
   screens: {
     sm: '768px',
     md: '880px',
