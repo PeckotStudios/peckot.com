@@ -135,16 +135,33 @@ export default {
         window.addEventListener('resize', () => {
             this.$forceUpdate();
         });
-        axios.get('https://blog.peckot.com/api/getLatest3Posts')
+        axios.get('https://blog.peckot.com/index.xml')
             .then((response) => {
-                let blogs = response.data.data;
-                console.log(blogs);
+                const articles = [];
+                let items = response.data.match(/<item>((?:.|\r|\n)*?)<\/item>/g);
+                for (let item of items) {
+                    let article = {};
+                    article.title = item.match(/<title>((?:.|\r|\n)*?)<\/title>/)[1];
+                    article.link = item.match(/<link>((?:.|\r|\n)*?)<\/link>/)[1];
+                    article.date = item.match(/<date>((?:.|\r|\n)*?)<\/date>/)[1];
+                    article.cover = item.match(/<cover>((?:.|\r|\n)*?)<\/cover>/)[1];
+                    article.desc = item.match(/<description>((?:.|\r|\n)*?)<\/description>/)[1];
+                    articles.push(article);
+                }
                 for (let i = 0; i < 3; i++) {
-                    document.getElementById(`blog${i + 1}_img`).src = blogs[i].cover || '/images/bg_blog.png';
-                    document.getElementById(`blog${i + 1}_title`).innerHTML = blogs[i].title || "标题获取失败";
-                    document.getElementById(`blog${i + 1}_desc`).innerHTML = blogs[i].description || '描述获取失败';
+                    document.getElementById(`blog${i + 1}_img`).src = articles[i].cover || '/images/bg_blog.png';
+                    document.getElementById(`blog${i + 1}_title`).innerHTML = articles[i].title || "标题获取失败";
+                    let desc = articles[i].desc;
+                    document.getElementById(`blog${i + 1}_desc`).innerHTML = (() => {
+                        const max = 25;
+                        if (desc.length > max) {
+                            return desc.substring(0, max) + '……';
+                        } else {
+                            return desc;
+                        }
+                    })() || '描述获取失败';
                     let card = document.getElementById(`blog${i + 1}_link`);
-                    card.href = blogs[i]._link;
+                    card.href = articles[i].link;
                 }
             })
             .catch((err) => {
